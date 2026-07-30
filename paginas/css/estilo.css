@@ -1,0 +1,473 @@
+/* Estilo Geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.interface{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 50px;
+}
+
+h2.título{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+
+h2.título span{
+    color: #a3d8f1;
+}
+
+/* Estilo do cabeçalho */
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  width: 100px;
+}
+
+
+header a{
+    color: #a3d8f1;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.botaocontato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #a3d8f1;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+
+.botaocontato button:hover{
+    box-shadow: 0px 0px 8px  #9fcde97c;
+    transform: scale(1.05);
+}
+
+/* Fonte */
+nav, ul, li, a {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.portifolio a{
+    width: 250px;
+}
+
+/* TOPO DO SITE */
+
+section.topodosite{
+    padding: 150px 2% 40px;
+}
+
+section.topodosite.flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topodosite h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.2px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.topodosite p{
+    color: #fff;
+    margin: 40px 0px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+}
+
+.topodosite .texto{
+    width: 650px;
+}
+
+.minhaimg{
+    transform: translateY(-120px);
+    position: relative;
+    left: 120px;
+    width: 420px;
+}
+
+.topodosite .minhaimg img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESPECIALIDADES*/
+
+section.especialidades{
+    padding: 40px 4%;
+    padding-top: 40px;
+    position: relative;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidadesbox{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: 1.2s;
+}
+
+.especialidades .especialidadesbox:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffffa8;
+}
+
+.especialidades .especialidadesbox h3{
+    font-size: 28px;
+    margin: 10px 0 0;
+    font-family: Arial, sans-serif;
+}
+
+.especialidades .especialidadesbox p{
+    font-family: Arial, sans-serif;
+}
+
+/*PORTIFÓLIO*/
+
+.flex .imgportbox{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: 1.2s;
+}
+
+.flex .imgportbox:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffffa8;
+}
+
+.flex .imgportbox h3{
+    font-size: 28px;
+    margin: 10px 0 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.flex .imgportbox p{
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.flex > .imgport{
+    width: 250px;
+    display: block;
+}
+
+/*BOTAO CONTATO*/
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 16, 16, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.caixa-contato {
+    position: relative;
+
+    width: 350px;
+    padding: 40px;
+
+    background: #080808;
+    border: 1px solid #222;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.caixa-contato a {
+    display: block;
+
+    margin: 12px auto;
+    padding: 10px;
+
+    width: 200px;
+
+    color: #9ed8ff;
+    text-decoration: none;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caixa-contato a:hover {
+    background: #151515;
+}
+
+#fecharContato {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#fecharContato:hover {
+    background: #252525;
+}
+
+.modal #fecharContato{
+    color: aqua;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 100px;
+  padding-top: 25px;
+  border-top: 1px solid #a3d8f1;
+}
+
+footer a {
+  color: #a3d8f1;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+footer small {
+  color: #777777;
+  display: block;
+  margin-top: 15px;
+}
+
+/*MENU HAMBÚRGUER*/
+
+.menu-hamburguer{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 35px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-hamburguer span{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #a3d8f1;
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.menumobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #080808;
+    padding: 100px 30px;
+    transform: translateX(100%);
+    transition: .3s;
+    z-index: 1000;
+}
+
+.menumobile.ativo{
+    transform: translateX(0);
+}
+
+.menumobile ul{
+    list-style: none;
+}
+
+.menumobile ul li{
+    margin-bottom: 25px;
+}
+
+.menumobile ul li a{
+    color: #fff;
+    font-size: 18px;
+    width: auto;
+}
+
+
+
+@media screen and (max-width: 1020px) {
+
+    .menu-hamburguer{
+        display: flex;
+    }
+
+    .menumobile{
+        display: block;
+    }
+
+
+.flex {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap!important;
+    }
+
+    .texto {
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .minhaimg {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .minhaimg img {
+        width: 70%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .interface {
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.topodosite .texto {
+    width: 100%;
+}
+
+.minhaimg {
+    transform: none;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.topodosite h1{
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+  footer nav{
+    margin-top: 20px;
+}
+
+.flex > .imgport{
+    width: 100%;
+}
+
+    /*CABEÇALHO*/
+    .menudescktop, .botaocontato{
+        display: none;
+    }
+}
+
+/*SOBRE*/
+
+section.sobre{
+    padding: 40px 4%;
+    margin-top: -150px;
+}
+
+.sobre p{
+    color: #fff;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
